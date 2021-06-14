@@ -1,0 +1,20 @@
+[package]
+name = "bootboot-rs"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+cty = "0.2.1"
+bit_field = "0.10.1"
+chrono = { version = "0.4.19", default-features = false }
+
+[features]
+alloc = []
+default = []
+
+# docs.rs-specific configuration
+[package.metadata.docs.rs]
+# document all features
+all-features = true
+# defines the configuration attribute `docsrs`
+rustdoc-args = ["--cfg", "docsrs"]
